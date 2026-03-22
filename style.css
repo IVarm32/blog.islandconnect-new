@@ -1,0 +1,359 @@
+/* Custom styles for Island Connect AI Blog - Jamaican Brand Colors */
+
+:root {
+    --jamaican-green: #009B3A;
+    --jamaican-gold: #FED100;
+    --jamaican-black: #000000;
+    --jamaican-yellow: #FFD700;
+    --jamaican-dark-green: #006B2A;
+    --jamaican-light-green: #00C44D;
+    --jamaican-light-gold: #FFE135;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation links - Jamaican colors */
+.nav-link {
+    @apply text-yellow-400 hover:text-green-400 transition-colors font-medium relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--jamaican-green), var(--jamaican-gold));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero section with Jamaican gradient */
+.hero-section {
+    background: linear-gradient(135deg, var(--jamaican-green) 0%, var(--jamaican-gold) 50%, var(--jamaican-black) 100%);
+}
+
+/* Blog card styles */
+.blog-card {
+    @apply bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2;
+}
+
+.blog-card-image {
+    @apply relative h-48 overflow-hidden;
+}
+
+.blog-card-category {
+    @apply absolute top-4 left-4 px-3 py-1 rounded-full text-sm font-semibold;
+}
+
+.category-real-estate {
+    background-color: var(--jamaican-green);
+    color: white;
+}
+
+.category-tourism {
+    background-color: var(--jamaican-gold);
+    color: black;
+}
+
+.category-technology {
+    background-color: var(--jamaican-black);
+    color: var(--jamaican-gold);
+}
+
+.category-luxury {
+    background-color: var(--jamaican-green);
+    color: white;
+}
+
+.category-recovery {
+    background-color: var(--jamaican-gold);
+    color: black;
+}
+
+.category-analysis {
+    background-color: var(--jamaican-black);
+    color: var(--jamaican-gold);
+}
+
+/* Button styles - Jamaican theme */
+.btn-jamaican-green {
+    background-color: var(--jamaican-green);
+    color: white;
+    @apply hover:bg-green-700 transition-colors;
+}
+
+.btn-jamaican-gold {
+    background-color: var(--jamaican-gold);
+    color: black;
+    @apply hover:bg-yellow-400 transition-colors;
+}
+
+.btn-jamaican-black {
+    background-color: var(--jamaican-black);
+    color: var(--jamaican-gold);
+    @apply hover:bg-gray-800 transition-colors;
+}
+
+/* Gradient text for Jamaican theme */
+.gradient-jamaican {
+    background: linear-gradient(135deg, var(--jamaican-green), var(--jamaican-gold), var(--jamaican-black));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hero section animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Particle animation */
+.particle {
+    position: absolute;
+    background: rgba(255, 215, 0, 0.3); /* Jamaican gold with transparency */
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    left: 10%;
+    top: 20%;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    left: 80%;
+    top: 60%;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(3) {
+    width: 25px;
+    height: 25px;
+    left: 50%;
+    top: 80%;
+    animation-delay: 4s;
+}
+
+.particle:nth-child(4) {
+    width: 10px;
+    height: 10px;
+    left: 90%;
+    top: 10%;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(5) {
+    width: 18px;
+    height: 18px;
+    left: 20%;
+    top: 70%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+/* Card hover effects */
+.card-hover {
+    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+}
+
+/* Section spacing */
+.section-spacing {
+    @apply py-20 md:py-32;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+    .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    
+    .text-5xl {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+    }
+    
+    .text-6xl {
+        font-size: 3rem;
+        line-height: 3.25rem;
+    }
+}
+
+/* Mobile menu styles */
+#mobile-menu {
+    @apply mt-4 pb-4 border-t border-gray-800;
+}
+
+#mobile-menu .nav-link {
+    @apply block py-2 text-yellow-400 hover:text-green-400;
+}
+
+/* Chart containers */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin: 20px 0;
+}
+
+/* Modal styles */
+.modal-backdrop {
+    @apply fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center;
+}
+
+.modal-content {
+    @apply bg-white p-8 rounded-2xl max-w-md w-full mx-4;
+}
+
+/* Form styles */
+.form-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all;
+}
+
+.form-input:focus {
+    @apply outline-none;
+}
+
+/* Loading states */
+.loading {
+    @apply relative overflow-hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.4), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Focus styles */
+.focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
+}
+
+/* Print styles */
+@media print {
+    nav, footer, .bg-gradient-to-r, .bg-gradient-to-br {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .text-white {
+        color: black !important;
+    }
+    
+    .bg-green-600, .bg-yellow-500, .bg-black {
+        background: #f3f4f6 !important;
+    }
+}
+
+/* Dark mode support with Jamaican colors */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #f9fafb;
+        --text-light: #d1d5db;
+        --bg-light: #111827;
+        --bg-white: #1f2937;
+    }
+}
+
+/* Custom Jamaican button gradient */
+.btn-jamaican-gradient {
+    background: linear-gradient(135deg, var(--jamaican-green), var(--jamaican-gold));
+    color: white;
+    @apply hover:shadow-lg transition-all duration-300;
+}
+
+.btn-jamaican-gradient:hover {
+    background: linear-gradient(135deg, var(--jamaican-dark-green), var(--jamaican-light-gold));
+}
+
+/* Blog section specific styles */
+.blog-section {
+    background: linear-gradient(135deg, rgba(0, 155, 58, 0.1), rgba(254, 209, 0, 0.1));
+}
+
+.blog-card-title {
+    @apply text-xl font-bold text-black mb-3;
+}
+
+.blog-card-description {
+    @apply text-gray-600 mb-4 leading-relaxed;
+}
+
+.blog-card-date {
+    @apply text-sm text-gray-500;
+}
+
+/* Jamaican flag inspired elements */
+.jamaican-flag-element {
+    background: linear-gradient(to right, var(--jamaican-green) 33%, var(--jamaican-gold) 33% 66%, var(--jamaican-black) 66%);
+}
+
+/* Responsive blog grid */
+.blog-grid {
+    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
